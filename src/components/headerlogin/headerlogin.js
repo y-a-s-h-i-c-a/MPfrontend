@@ -18,7 +18,11 @@ function headerlogin() {
          
          <Link to="/MyApi">
          <button className="button1" >My APIs</button> </Link>
-       
+        
+         <Link to="/Contact">
+         <button className="button1" >Contact us</button> </Link>
+
+
           <button className="button2"
            onClick={() => {
             setOpenModal(true);
