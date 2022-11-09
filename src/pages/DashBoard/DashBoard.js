@@ -29,7 +29,7 @@ function Dashboard() {
         if(data.user) {
             localStorage.setItem("accessToken",data.user);
             alert("Login successful");
-            window.location.href = "/mplogin";
+            window.location.href = "/Mplogin";
         } else {
             alert("Please check your username and password");
         }
@@ -74,7 +74,7 @@ function Dashboard() {
                             <input type="submit" value="Login/Signup" id="submit"  />
                           </form>
                           <div className="register">
-                           Not a member? <Link className="redirect" href="/register">Register now</Link>
+                           Not a member? <Link className="redirect" to="/register">Register now</Link>
                          </div>
                     </div>
                 </div>
