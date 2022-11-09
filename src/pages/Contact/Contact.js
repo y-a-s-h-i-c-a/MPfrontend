@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import "./Contact.scss";
 import Header from '../../components/header/Header';
+import { useNavigate } from "react-router-dom";
 
 function contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("")
     const [phone, setPhone] = useState("")
     const [message, setMessage] = useState("")
-
+    const navigate = useNavigate()
 
     async function registerUser(event) {
         event.preventDefault();
@@ -29,7 +30,7 @@ function contact() {
 
         if(data.status === "ok") {
             alert("Successfully Submitted");
-            window.location.href = "/Mplogin";
+            navigate("/Mplogin")
         } else {
             alert("data.error");
         }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from '../../components/header/Header';
 import userPic from "../../dashboard.svg";
 import "./dashboard.scss";
@@ -7,7 +7,7 @@ import "./dashboard.scss";
 function Dashboard() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-   
+   const navigate = useNavigate()
 
 
     async function loginUser(event) {
@@ -29,7 +29,7 @@ function Dashboard() {
         if(data.user) {
             localStorage.setItem("accessToken",data.user);
             alert("Login successful");
-            window.location.href = "/Mplogin";
+           navigate("/Mplogin");
         } else {
             alert("Please check your username and password");
         }
