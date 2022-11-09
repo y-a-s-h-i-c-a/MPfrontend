@@ -14,7 +14,7 @@ function EditModal({ closeModal, id }) {
       navigate("/login");
     }
 
-    fetch(`http://localhost:3000/api/myapi/${id}`, {
+    fetch(`https://marketplacee.herokuapp.com/api/myapi/${id}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("accessToken"),
       },
@@ -28,7 +28,7 @@ function EditModal({ closeModal, id }) {
   function updateAPI(event) {
     event.preventDefault();
 
-    fetch(`http://localhost:3000/api/update/${id}`, {
+    fetch(`https://marketplacee.herokuapp.com/api/update/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ function EditModal({ closeModal, id }) {
   function deleteAPI(event) {
     event.preventDefault();
 
-    fetch(`http://localhost:3000/api/delete/${id}`, {
+    fetch(`https://marketplacee.herokuapp.com/api/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

@@ -13,7 +13,7 @@ export default function MyApi() {
         navigate("/login");
       }
   
-      fetch("http://localhost:3000/api/myapi", {
+      fetch("https://marketplacee.herokuapp.com/api/myapi", {
           method:"GET",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("accessToken"),

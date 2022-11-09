@@ -21,7 +21,7 @@ function BgRemover() {
  setmsg("processing");
   const formdata = new FormData();
   formdata.append("file",files);
-  let data = await axios.post("http://localhost:3000/bgremove", formdata);   
+  let data = await axios.post("https://marketplacee.herokuapp.com/bgremove", formdata);   
   triggerBase64Download("data:image/png;base64,"+ data.data.base64img,"bg-removed " + files.name.split(".")[0])
   setmsg("Downloaded");
 }
