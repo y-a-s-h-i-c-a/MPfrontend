@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import userPic from "../../dashboard.svg";
 import "./Register.scss";
 import Header from "../../components/header/Header";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-
+    const navigate = useNavigate()
 
     async function registerUser(event) {
         event.preventDefault();
@@ -28,7 +29,7 @@ function Register() {
 
         if(data.status === "ok") {
             alert("Successfully Registered");
-            window.location.href = "/login";
+            navigate("/login")
         } else {
             alert("data.error");
         }
