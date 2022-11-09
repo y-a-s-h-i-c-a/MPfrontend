@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from '../../components/header/Header';
 import userPic from "../../dashboard.svg";
 import "./dashboard.scss";
@@ -12,7 +13,7 @@ function Dashboard() {
     async function loginUser(event) {
         event.preventDefault();
         
-        const response = await fetch ("http://localhost:3000/api/login",{
+        const response = await fetch ("https://marketplacee.herokuapp.com/api/login",{
             method:"POST",
             headers:{
                 "Content-Type": "application/json",
@@ -73,7 +74,7 @@ function Dashboard() {
                             <input type="submit" value="Login/Signup" id="submit"  />
                           </form>
                           <div className="register">
-                           Not a member? <a className="redirect" href="/register">Register now</a>
+                           Not a member? <Link className="redirect" href="/register">Register now</Link>
                          </div>
                     </div>
                 </div>
