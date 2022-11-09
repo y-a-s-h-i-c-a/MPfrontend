@@ -20,7 +20,7 @@ function headerlogin() {
          <button className="button1" >My APIs</button> </Link>
         
          <Link to="/Contact">
-         <button className="button1" >Contact us</button> </Link>
+         <button className="button1"  style={{paddingLeft:'20px'}}>Contact us</button> </Link>
 
 
           <button className="button2"
